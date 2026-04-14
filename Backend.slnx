@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Application/Application.csproj" />
+  <Project Path="Backend/Backend.csproj" />
+  <Project Path="Domain/Domain.csproj" Id="d486cb4e-998c-4dc1-aa01-db6ff07dbd01" />
+  <Project Path="Infrastructure/Infrastructure.csproj" />
+  <Project Path="Shared/Shared.csproj" />
+</Solution>

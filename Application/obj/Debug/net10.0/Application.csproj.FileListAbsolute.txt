@@ -1,0 +1,17 @@
+D:\codes\chat\Backend\Application\bin\Debug\net10.0\Application.deps.json
+D:\codes\chat\Backend\Application\bin\Debug\net10.0\Application.dll
+D:\codes\chat\Backend\Application\bin\Debug\net10.0\Application.pdb
+D:\codes\chat\Backend\Application\bin\Debug\net10.0\Domain.dll
+D:\codes\chat\Backend\Application\bin\Debug\net10.0\Infrastructure.dll
+D:\codes\chat\Backend\Application\bin\Debug\net10.0\Domain.pdb
+D:\codes\chat\Backend\Application\bin\Debug\net10.0\Infrastructure.pdb
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\Application.csproj.AssemblyReference.cache
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\Application.AssemblyInfoInputs.cache
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\Application.AssemblyInfo.cs
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\Application.csproj.CoreCompileInputs.cache
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\Applicat.44B5EDA2.Up2Date
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\Application.dll
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\refint\Application.dll
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\Application.pdb
+D:\codes\chat\Backend\Application\obj\Debug\net10.0\ref\Application.dll
