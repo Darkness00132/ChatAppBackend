@@ -1,81 +1,100 @@
-# Chat App Backend – Engineering Overview
+# 💬 Real-Time Chat System
 
-## Overview
+A lightweight real-time chat backend built with ASP.NET Core SignalR featuring authentication, chat rooms, and persistent messaging.
 
-This repository contains the backend for a **real‑time chat system**.  
-The focus is on **real‑time communication, authentication correctness, and clean backend structure**, rather than delivering a full end‑to‑end product.
+The project focuses on real-time communication, secure authentication, and clean backend architecture.
 
-The backend is designed to reliably support a modern frontend client while keeping responsibilities clearly separated.
+---
 
-***
+## 🚀 Features
 
-## Core Capabilities
+* JWT Authentication + Refresh Tokens
+* Real-time messaging using SignalR
+* Chat rooms (Groups-based messaging)
+* Join / Leave room handling
+* Message persistence
+* User tracking inside chat sessions
 
-*   Real‑time messaging using **SignalR**
-*   Authenticated, group‑based connections
-*   Message persistence
-*   Access / refresh token authentication
+---
 
-***
+## 🏗️ Architecture
 
-## Engineering Highlights
+Follows Clean Architecture:
 
-### SignalR‑Based Real‑Time Communication
+* Application → business logic (services)
+* Domain → core entities & rules
+* Infrastructure → data access & external services
 
-*   Users are authenticated before establishing a SignalR connection
-*   Chat rooms are represented using SignalR groups
-*   Join, send, and disconnect flows are handled explicitly
+Uses:
 
-This provides low‑latency updates without polling and keeps real‑time state centralized on the server.
+* Repository Pattern
+* Unit of Work
+* Dependency Injection
 
-***
+---
 
-### Authentication Integrated with Real‑Time Flow
+## ⚙️ Core Logic Highlights
 
-*   JWT access tokens are used for authorization
-*   Refresh tokens are stored and revoked server‑side
-*   SignalR connections are authorized using the same auth mechanism
+### 🔐 Authentication Flow
 
-This ensures that real‑time connections are tied to valid user sessions and prevents stale or unauthorized access.
+* User logs in and receives JWT access token
+* Refresh token used for session renewal
+* Secure identity-based access to SignalR hub
 
-***
+---
 
-### Explicit Connection Lifecycle Handling
+### 💬 Real-Time Chat System
 
-*   User validation on connect
-*   Room membership management
-*   Message persistence before broadcast
-*   Cleanup on disconnect
+Users connect to SignalR hub and:
 
-This makes connection behavior predictable and avoids common real‑time edge cases.
+* Join chat room via group
+* Send messages in real-time
+* Receive broadcast messages instantly
 
-***
+---
 
-### Service‑Driven Design
+### 👥 Room Management
 
-*   Business logic lives in application services
-*   Hubs and controllers remain thin and focused
+* Users join/leave rooms dynamically
+* Automatic group assignment in SignalR
+* System messages for join/leave events
 
-This improves readability, testability, and long‑term maintainability.
+---
 
-***
+### 💾 Message Handling
 
-## Scope Note
+* Messages stored in database
+* Sent messages broadcast to group
+* Supports per-room message history retrieval
 
-Chat rooms are **predefined and seeded by design**.  
-This is an intentional scope decision to keep the project focused on **real‑time logic and authentication**, rather than CRUD configuration.
+---
 
-Rooms can be made dynamic later without architectural changes.
+## 🛠️ Tech Stack
 
-***
+* ASP.NET Core
+* SignalR
+* Entity Framework Core
+* ASP.NET Identity
+* JWT
 
-## Summary
+---
 
-This project demonstrates:
+## 🧪 Run
 
-*   Practical use of **SignalR** in authenticated scenarios
-*   Correct handling of access and refresh tokens
-*   Clean separation of real‑time infrastructure and business logic
-*   Intentional scoping to focus on complex backend concerns
+```bash id="run-steps"
+git clone https://github.com/your-username/chat-system.git
+cd chat-system
+dotnet restore
+dotnet run
+```
 
-> This README is intentionally concise and intended for **engineers and reviewers**, not end users.
+---
+
+## 📌 Notes
+
+This project focuses on:
+
+* Real-time communication using SignalR
+* Secure authentication flow (JWT + Refresh Tokens)
+* Clean backend architecture
+* Group-based messaging system
